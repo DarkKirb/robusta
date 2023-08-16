@@ -33,6 +33,8 @@ class HelloWorld {
 
     private native void setStringHelloWorld();
 
+    private native void getOptionalString(String string);
+
     public static void main(String[] args) {
         ArrayList<String> output = HelloWorld.special(new ArrayList<Integer>(List.of(1, 2, 3)), 4);
         System.out.println(output);
@@ -52,5 +54,7 @@ class HelloWorld {
         System.out.println("Now h.foo is: \"" + h.foo + "\"");
         h.setStringHelloWorld();
         System.out.println("After setStringHelloWorld() h.foo is: \"" + h.foo + "\"");
+        h.getOptionalString("Hello, world!");
+        h.getOptionalString(null);
 	}
 }
